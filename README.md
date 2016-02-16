@@ -48,7 +48,11 @@ Scripts:
 
 ### Dependencies
 - Python 3.4 (Python 2.7 would also work, just type: ```from __future__ import print_function``` in the beginning of the script)
+
 - Pandas (any relatively recent version would work)
+
 - Numpy (any relatively recent version would work)
+
 - Sklearn (any relatively recent version would work)
+
 - XGBoost 0.4.0
