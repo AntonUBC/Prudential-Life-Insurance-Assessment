@@ -20,17 +20,15 @@ to increase the predictive power of the model:
   - Bumpers - predicted probabilities of a binary classifier (XGBoost) for different label splits (e.g., 1 vs rest, 1 and 2 vs rest, 1, 2, and 3 vs rest, and etc. Overall, 7 bumpers).
   This idea was borrowed from the [2d place solution of the Kaggle CrowdFlower challenge] (https://github.com/geffy/kaggle-crowdflower). By construction, these bumpers
   should reduce the predictive error of the model.
-  
   - Stucked predictions of a multi-label classifier (XGBoost) constructed using a 4-fold stacked generalization. 
 
 ### Solution
 
  The model is an ensemble of three regression models: Gradient Boosting Trees (XGBoost), Random Forest (sklearn), and Extremely Randomized Trees (sklearn).
  Both hyperparameters of ensembled models and ensemble weights were trained using 4-fold cross-validation.
- The idea for mapping regressor predictors to labels was borrowed from the [public script] (https://www.kaggle.com/zeroblue/prudential-life-insurance-assessment/xgboost-with-optimized-offsets/run/133836) of Michael Hartman
+ The idea for mapping regressor predictors to labels was borrowed from the [public script] (https://www.kaggle.com/zeroblue/prudential-life-insurance-assessment/xgboost-with-optimized-offsets/run/133836) of Michael Hartman.
  The purpose of this procedure is to use training data to estimate the label-specific shifters (offsets) which should be applied to predicted values
  in order to reduce the prediction error. However, I made substantial changes to the procedure:
- 
    - I trained the offset values using the stacked train predictions instead of fitted values of the model used in the original approach. This should have reduce the chance of overfitting (and it did!).
    - I chose the initial offset values based on the discrepancies between test predictions and the distribution of labels in training data estimated at quantile values.
    
