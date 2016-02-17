@@ -29,7 +29,7 @@ to increase the predictive power of the model:
  The idea for mapping regressor predictors to labels was borrowed from the [public script] (https://www.kaggle.com/zeroblue/prudential-life-insurance-assessment/xgboost-with-optimized-offsets/run/133836) of Michael Hartman.
  The purpose of this procedure is to use training data to estimate the label-specific shifters (offsets) which should be applied to predicted values
  in order to reduce the prediction error. However, I made substantial changes to the procedure:
-   - I trained the offset values using the stacked train predictions instead of fitted values of the model used in the original approach. This should have reduce the chance of overfitting (and it did!).
+   - I trained the offset values using the stacked train predictions instead of fitted values of the model used in the original approach. This should have reduced the chance of overfitting (and it did!).
    
    - I chose the initial offset values based on the discrepancies between test predictions and the distribution of labels in training data estimated at quantile values.
    
