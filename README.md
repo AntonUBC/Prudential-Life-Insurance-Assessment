@@ -36,8 +36,8 @@ to increase the predictive power of the model:
 ### Instruction
 
 Download the project folder to your computer and run the file ```/prudential_risk_prediction/ensemble/ensemble_submission.py```
-(you may need to adjust paths in ```prudential_risk_prediction/prudential_utils/paths.py``` accordingly). This will generate
-the submission file in csv format and load it to ```prudential_risk_prediction/data/submission``` folder. This file can be then submitted at
+(you may need to adjust paths in ```/prudential_risk_prediction/prudential_utils/paths.py``` accordingly). This will generate
+the submission file in csv format and load it to ```/prudential_risk_prediction/data/submission``` folder. This file can be then submitted at
 [the project webpage] (https://www.kaggle.com/c/prudential-life-insurance-assessment). Alternatively, you can submit an existing file.
 
 Scripts:
