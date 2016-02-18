@@ -1,7 +1,7 @@
 ## Solution to [Prudential Life Insurance Assessment Challenge] (https://www.kaggle.com/c/prudential-life-insurance-assessment)
 
 This is the model which I unfortunately did not select for submission. This model gives the quadratic weighted kappa score of 0.67456 and 65th place on the leaderboard (top 3%).
-Ironically, this is more than 700 positions higher than the rank of my official submission which overfitted to the LB data.
+Ironically, this is more than 600 positions higher than the rank of my official submission which overfitted to the LB data.
 
 ### Project Description
 
