@@ -20,7 +20,7 @@ to increase the predictive power of the model:
   - Bumpers - predicted probabilities of a binary classifier (XGBoost) for different label splits (e.g., 1 vs rest, 1 and 2 vs rest, 1, 2, and 3 vs rest, and etc. Overall, 7 bumpers).
   This idea was borrowed from the [2d place solution of the Kaggle CrowdFlower challenge] (https://github.com/geffy/kaggle-crowdflower). By construction, these bumpers should have reduced the probability of severe missclassification.
 
-  - Stucked predictions of a multi-label classifier (XGBoost) constructed using a 4-fold stacked generalization. 
+  - Stacked predictions of a multi-label classifier (XGBoost) constructed using a 4-fold stacked generalization. 
 
 ### Solution
 
